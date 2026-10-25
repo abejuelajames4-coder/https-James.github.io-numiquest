@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: numiquest
+    runtime: python
+    plan: free
+    region: singapore
+    buildCommand: python -m py_compile server.py approve_teacher.py
+    startCommand: python server.py
+    healthCheckPath: /api/health
+    envVars:
+      - key: NUMIQUEST_DB
+        value: /tmp/numiquest.sqlite3
+      - key: NUMIQUEST_DEMO
+        value: "0"
+      - key: NUMIQUEST_VOLATILE_DATA
+        value: "1"
+      - key: NUMIQUEST_SECURE_COOKIE
+        value: "1"
+      - key: NUMIQUEST_TEACHER_EMAILS
+        sync: false
+      - key: NUMIQUEST_ADMIN_APPROVAL_TOKEN
+        generateValue: true
+
