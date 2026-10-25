@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+numiquest.sqlite3*
+*.sqlite
+*.sqlite3
+*.db
+.env
+.venv/
+*.zip
+NumiQuest-complete-source/
+
