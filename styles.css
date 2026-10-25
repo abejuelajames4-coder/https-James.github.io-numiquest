@@ -8,3 +8,189 @@ body.dark-theme{background:#10283b;color:#e6f4fd;--ink:#e6f4fd;--muted:#9ab6c9;-
 .brand-mark{width:42px;height:42px;flex:none;object-fit:contain;border:0;background:transparent;box-shadow:none;border-radius:50%;font-size:0}.school-seal{width:150px;height:150px;object-fit:contain;border:0;background:transparent;box-shadow:none;border-radius:0;font-size:0}
 @media(max-width:650px){.school-seal{width:88px;height:88px}}
 
+/* NumiQuest UI refresh: calmer surfaces, clearer hierarchy, and more playful learning cues. */
+:root{--navy:#063c68;--blue:#168fe4;--sky:#eaf8fd;--line:#cfe7f2;--orange:#ff971c;--ink:#123a5d;--muted:#66839a;--green:#1ba76a;--card:#fff;--shadow:0 12px 30px rgba(13,67,101,.08);--radius:18px}
+body{background:radial-gradient(ellipse at 72% -15%,#fff 0,#f2fbff 32%,#eaf7fc 75%,#e5f4f9 100%);font-family:'Nunito',system-ui,sans-serif;line-height:1.5}
+.shell{max-width:1480px;padding:22px;gap:22px}
+.sidebar{width:252px;top:22px;height:calc(100vh - 44px);min-height:560px;border-radius:24px;padding:20px 14px;background:linear-gradient(155deg,#07568d 0%,#06416f 52%,#062e52 100%);box-shadow:0 18px 42px rgba(5,55,91,.2)}
+.brand{gap:12px;padding:4px 9px 21px;margin:0 2px 10px;border-bottom:1px solid rgba(255,255,255,.14)}
+.brand-mark{width:46px;height:46px}
+.brand-name{font-size:20px;letter-spacing:-.7px}
+.brand-tag{font-size:9px;letter-spacing:1px}
+.nav{gap:6px}
+.nav button{min-height:46px;padding:10px 12px;border-radius:13px;font-size:13px;letter-spacing:.05px;color:#e8f6ff;transition:background .18s ease,color .18s ease,transform .18s ease}
+.nav button:hover{background:rgba(255,255,255,.11);transform:translateX(2px)}
+.nav button.active{background:linear-gradient(100deg,#ffa52d,#ff8a0b);box-shadow:0 7px 18px rgba(255,141,15,.25);color:#fff}
+.nav-icon{width:23px;height:23px;display:inline-grid;place-items:center;flex:none;border-radius:8px;background:rgba(255,255,255,.11);color:inherit}
+.nav-icon svg{width:17px;height:17px;display:block;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.nav button.active .nav-icon{background:rgba(255,255,255,.2)}
+.sidebar-bottom{padding:10px 4px 1px}
+.side-student{padding:14px 6px 2px;gap:10px;line-height:1.35}
+.side-student b{display:block;max-width:150px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.side-student small{margin-top:3px}
+.content{gap:19px;padding:0 2px 12px}
+.topbar{position:sticky;top:10px;z-index:5;padding:12px 17px;border:1px solid rgba(198,226,239,.86);border-radius:17px;background:rgba(255,255,255,.88);box-shadow:0 6px 22px rgba(12,73,109,.055);backdrop-filter:blur(12px)}
+.page-title{font-size:27px;line-height:1.18;letter-spacing:-.6px;color:#073e6b}
+.page-subtitle{font-size:13px;line-height:1.5;color:#628198;margin-top:4px}
+.top-actions{gap:9px}
+.pill{padding:9px 13px;border-radius:12px;border-color:#d6e9f2;box-shadow:none}
+.icon-btn{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;transition:background .18s,border-color .18s,transform .18s}
+.icon-btn:hover{background:#eaf7fc;border-color:#a9d4e8;transform:translateY(-1px)}
+.icon-btn svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.card{padding:21px;border-radius:20px;border-color:#d7eaf3;box-shadow:0 10px 28px rgba(14,75,111,.06)}
+.card-title{font-size:17px;line-height:1.3;letter-spacing:-.15px;margin-bottom:14px;color:#103e67}
+.muted{color:#6b879c}
+.small{font-size:12px;line-height:1.55}
+.grid{gap:15px}
+.hero-row{gap:15px}
+.welcome{min-height:126px;padding:21px 23px;border:1px solid #cce9f4;border-radius:20px;background:linear-gradient(115deg,#dff6fc 0%,#effbff 55%,#fff 100%);position:relative;overflow:hidden}
+.welcome:after{content:'';position:absolute;width:170px;height:170px;border:24px solid rgba(41,177,219,.08);border-radius:50%;right:-52px;top:-63px;pointer-events:none}
+.welcome h2{font-size:22px;line-height:1.25;letter-spacing:-.35px}
+.welcome p{font-size:13px;margin-top:3px}
+.avatar{width:66px;height:66px;font-size:21px;border:3px solid #fff;background:linear-gradient(145deg,#85d9ef,#d9f5fb);box-shadow:0 5px 14px rgba(12,111,160,.15)}
+.stats{gap:11px}
+.stat{min-height:126px;padding:16px;border-radius:17px;border-color:#d6eaf3;background:linear-gradient(145deg,#fff,#f2fbfe);box-shadow:0 6px 18px rgba(11,77,114,.045);transition:transform .18s,box-shadow .18s}
+.stat:hover,.progress-item:hover,.game-card:hover,.plant-card:hover{transform:translateY(-3px);box-shadow:0 13px 25px rgba(11,77,114,.12)}
+.stat-icon{width:43px;height:43px;border-radius:14px;font-size:21px;background:#e4f6fd;color:#1076b5}
+.stat strong{font-size:19px;line-height:1.25}
+.progress-grid{gap:12px}
+.progress-item{border-radius:16px;padding:17px 10px;background:linear-gradient(155deg,#f4fbfe,#fff);border-color:#d8eaf3;transition:transform .18s,box-shadow .18s}
+.progress-item .big-icon{width:44px;height:44px;margin:0 auto 7px;border-radius:14px;display:grid;place-items:center;background:#e6f6fc;font-size:22px;filter:drop-shadow(0 3px 3px rgba(8,77,111,.08))}
+.progress-item:nth-child(2) .big-icon{background:#fff3de}.progress-item:nth-child(3) .big-icon{background:#eaf4ff}.progress-item:nth-child(4) .big-icon{background:#e8f8ee}
+.progress-item strong{font-size:18px;line-height:1.3}
+.progress-item span{font-size:11px;line-height:1.4}
+.garden-banner{border-color:#cdebd9;background:linear-gradient(105deg,#ecfff2 0%,#f7fffa 55%,#fff 100%);padding:16px 19px}
+.garden-emoji{width:48px;height:48px;display:grid;place-items:center;border-radius:15px;background:#ddf7e7;font-size:27px}
+.growline{height:10px;border-radius:99px;background:#d9edf2}
+.growline i{border-radius:99px}
+.button{min-height:42px;padding:10px 17px;border-radius:12px;font-size:13px;letter-spacing:.1px;box-shadow:0 5px 13px rgba(18,132,220,.18);transition:transform .17s,filter .17s,box-shadow .17s}
+.button:hover{transform:translateY(-2px);box-shadow:0 8px 18px rgba(18,132,220,.22)}
+.button:active{transform:translateY(0)}
+.button.orange{box-shadow:0 5px 14px rgba(242,137,17,.2)}
+.button.light{border:1px solid #cde5f0;background:#f0f9fd;color:#126b9c}
+.button.small-btn{min-height:35px;padding:7px 12px;border-radius:10px}
+.lesson-row{min-height:70px;padding:13px 15px;border-color:#dcecf3;border-radius:15px;transition:border-color .18s,box-shadow .18s,transform .18s}
+.lesson-row:hover{border-color:#a9d8eb;box-shadow:0 7px 18px rgba(9,83,125,.075);transform:translateY(-1px)}
+.lesson-icon{width:43px;height:43px;border-radius:13px;background:linear-gradient(145deg,#0b5482,#073c68);font-size:19px;box-shadow:0 4px 10px rgba(5,61,98,.13)}
+.lesson-icon.done{background:linear-gradient(145deg,#29bd75,#149455)}
+.lesson-info strong{font-size:13px;line-height:1.35}
+.lesson-info small{display:block;line-height:1.45;margin-top:3px}
+.badge{padding:6px 10px;font-size:10px;letter-spacing:.15px}
+.badge.done,.badge.passed{background:#e1f6e9;color:#147d49}
+.badge.locked{background:#edf7fb;color:#527992}
+.badge.failed{background:#fff0ed;color:#c4534d}
+.page-grid{gap:14px}
+.game-card,.plant-card{padding:18px 15px;border-radius:18px;border-color:#d8eaf2;transition:transform .18s,box-shadow .18s;position:relative;overflow:hidden}
+.game-card:before,.plant-card:before{content:'';position:absolute;inset:0 auto auto 0;width:100%;height:4px;background:linear-gradient(90deg,#1b9ce3,#ffad39);opacity:.75}
+.game-card .game-icon{width:64px;height:64px;margin:2px auto 8px;border-radius:20px;display:grid;place-items:center;background:linear-gradient(145deg,#effaff,#dff4fb);font-size:34px;filter:drop-shadow(0 4px 4px rgba(9,76,112,.1))}
+.game-card h3,.plant-card h3{font-size:14px;line-height:1.35}
+.game-card p,.plant-card p{font-size:12px;line-height:1.45}
+.map-path{padding:14px 5px 21px}
+.map-stop:not(:last-child):after{height:4px;border-radius:4px}
+.stop-circle{width:48px;height:48px;font-size:16px;box-shadow:0 4px 10px rgba(19,92,130,.12)}
+.map-stop:not(:last-child):after{top:22px}
+.map-stop strong{font-size:12px;line-height:1.3}
+.map-stop small{font-size:10px}
+.plant-art{font-size:62px}
+.plant-card{padding:19px 14px}
+.plant-card .growline{margin:12px 3px}
+.requirement div{border-color:#dcecf2;border-radius:12px;padding:12px 6px;background:#fbfeff;font-size:11px}
+.requirement strong{font-size:13px}
+.form-control{min-height:43px;padding:10px 13px;border-radius:11px;border-color:#cbdfea;background:#fff;transition:border-color .16s,box-shadow .16s}
+.form-control:focus{border-color:#238fd0;box-shadow:0 0 0 4px rgba(35,143,208,.12);outline:0}
+.field{gap:7px;margin-bottom:13px}
+.field label{font-size:12px}
+.search-row{gap:10px;margin-bottom:14px}
+.table-wrap{border-color:#d6e8f0;border-radius:15px;box-shadow:0 4px 15px rgba(10,76,112,.035)}
+table{min-width:640px}
+th,td{padding:12px 14px;border-bottom-color:#eaf1f5;font-size:12px}
+th{background:#f3faff;color:#476a82;font-size:10px;letter-spacing:.55px}
+tbody tr{transition:background .15s}
+tbody tr:hover{background:#f6fbfd}
+.settings-section{border-color:#d8eaf2;border-radius:15px;padding:16px;background:linear-gradient(150deg,#fff,#f9fdff)}
+.settings-section h3{font-size:14px}
+.choice-row{gap:18px}
+.choice{min-height:42px}
+.choice input,.remember-row input{accent-color:#168fe4}
+.profile-top{gap:20px;padding:4px}
+.profile-avatar{width:96px;height:96px}
+.level-track{padding:15px 0 7px}
+.meter{height:10px;background:#e6f0f4}
+.meter i{background:linear-gradient(90deg,#168fe4,#48c1df)}
+.achievement{padding:14px 8px;border-radius:14px;transition:transform .18s}
+.achievement:hover{transform:translateY(-3px)}
+.achievement span{width:58px;height:58px;font-size:27px;box-shadow:0 6px 15px rgba(38,93,127,.14)}
+.activity-list{gap:10px}
+.activity{min-height:38px;padding:7px 9px;border-radius:10px;background:#f7fbfd;font-size:12px}
+.activity-icon{width:25px;height:25px;display:grid;place-items:center;border-radius:9px;background:#e5f5fc;color:#0879b8}
+.quiz-top{font-size:13px}
+.question-block{padding:15px 16px;border-color:#d8e8f0;border-radius:15px;background:#fcfeff}
+.question-block legend{font-size:14px;line-height:1.55}
+.question-options{gap:8px}
+.quiz-option{min-height:44px;padding:10px 13px;border-radius:12px;transition:border-color .16s,background .16s,transform .16s}
+.quiz-option:hover{transform:translateX(2px)}
+.quiz-option input{width:17px;height:17px;flex:none}
+.notice{padding:11px 13px;border:1px solid #f4d4d0;border-radius:12px;font-size:12px}
+.result-trophy{font-size:56px;filter:drop-shadow(0 5px 6px rgba(170,109,8,.2))}
+.score{font-size:34px;letter-spacing:-.5px}
+.modal-backdrop{background:rgba(5,34,57,.58);backdrop-filter:blur(5px)}
+.modal{padding:28px;border:1px solid #d8e8ef;border-radius:22px;box-shadow:0 24px 64px rgba(0,30,51,.28)}
+.modal-icon{width:62px;height:62px;margin:0 auto 10px;display:grid;place-items:center;border-radius:20px;background:#e9f7fc;font-size:34px}
+.modal h2{font-size:21px;line-height:1.35;letter-spacing:-.25px}
+.modal p{font-size:13px;line-height:1.6}
+.modal-actions{gap:10px;flex-wrap:wrap}
+.auth-wrap{gap:0;padding:28px;background:radial-gradient(ellipse at 12% 10%,#fff 0,#edfbff 42%,#dff4fb 100%)}
+.auth-card{width:min(1000px,100%);min-height:600px;border:1px solid #c6e9f5;border-radius:26px;box-shadow:0 25px 70px rgba(7,65,102,.15)}
+.auth-brand-panel{padding:48px 40px;background:linear-gradient(145deg,#def7fc 0%,#f5fcff 58%,#e8f8fc 100%)}
+.auth-brand-panel:before,.auth-brand-panel:after{width:155%;height:145px;left:-27%;top:-66px;transform:rotate(-17deg);opacity:.94}
+.auth-brand-panel:after{height:130px;bottom:-99px;top:auto;left:-25%;transform:rotate(-12deg);background:#ffb13a}
+.decor{font-size:40px;color:#60bddb;opacity:.28}
+.school-seal{width:148px;height:148px;margin-bottom:6px}
+.brand-big{font-size:40px;letter-spacing:-2px;margin-top:8px}
+.brand-slogan{font-size:15px;letter-spacing:.8px;color:#184b6b}
+.auth-form-panel{padding:46px 54px;background:linear-gradient(135deg,#fff,#f5fbfe)}
+.auth-form{max-width:370px}
+.auth-form h1{font-size:27px;line-height:1.25;letter-spacing:-.55px;color:#073e6b}
+.auth-form>p{font-size:13px;line-height:1.55;margin:7px 0 23px}
+.auth-form .field{margin-bottom:14px}
+.auth-form .form-control{min-height:47px;padding-left:42px}
+.input-symbol{left:14px;font-size:15px}
+.eye-toggle{right:9px;min-width:34px;min-height:34px;border-radius:9px}
+.remember-row{font-size:12px;min-height:28px;margin:9px 0 16px}
+.remember-row label{display:flex;align-items:center;gap:7px}
+.auth-form .button{min-height:47px;border-radius:13px;font-size:14px}
+.auth-foot{font-size:12px;margin-top:15px}
+.auth-switch{gap:8px;margin-top:18px}
+.auth-switch button{min-height:35px;padding:7px 10px;border-radius:10px}
+.volatile-notice{max-width:960px;padding:10px 14px;border-radius:12px;box-shadow:0 3px 12px rgba(88,101,38,.06)}
+.toast{max-width:min(92vw,560px);border-radius:13px;padding:12px 17px;box-shadow:0 10px 28px rgba(0,35,58,.25)}
+.link-button{border-radius:5px}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #69c8f2;outline-offset:3px}
+body.dark-theme{--ink:#e6f4fd;--muted:#a8c2d2;--card:#17384f;--line:#365d75;--shadow:0 12px 30px rgba(0,0,0,.2);background:radial-gradient(ellipse at 65% -15%,#234a65,#122d42 68%,#10283b)}
+body.dark-theme .topbar{background:rgba(20,51,73,.9);border-color:#31556c}
+body.dark-theme .page-title,body.dark-theme .card-title,body.dark-theme .auth-form h1{color:#e9f7ff}
+body.dark-theme .page-subtitle{color:#a9c4d5}
+body.dark-theme .card,body.dark-theme .stat,body.dark-theme .progress-item,body.dark-theme .lesson-row,body.dark-theme .game-card,body.dark-theme .plant-card,body.dark-theme .question-block,body.dark-theme .activity,body.dark-theme .settings-section{background:#17384f;border-color:#365d75;color:#e6f4fd}
+body.dark-theme .auth-wrap{background:radial-gradient(ellipse at 12% 10%,#183f59,#102b40 76%)}
+body.dark-theme .auth-card,body.dark-theme .auth-brand-panel,body.dark-theme .auth-form-panel{background:#17384f;border-color:#365d75}
+body.dark-theme .auth-form>p,body.dark-theme .auth-foot,body.dark-theme .auth-form .field label,body.dark-theme .auth-switch{color:#a9c4d5}
+body.dark-theme .form-control{background:#102d43;border-color:#42667d;color:#e6f4fd}
+body.dark-theme .button.light{background:#244c66;border-color:#3d6680;color:#e6f4fd}
+body.dark-theme .activity{background:#1c425c}
+body.dark-theme tbody tr:hover{background:#1b425d}
+@media(max-width:1000px){.shell{padding:15px;gap:15px}.sidebar{width:220px}.card{padding:18px}.auth-card{min-height:560px}.auth-form-panel{padding:36px}}
+@media(max-width:760px){.shell{padding:12px;display:block}.sidebar{position:fixed;z-index:15;left:12px;top:12px;bottom:12px;height:auto;min-height:0;width:min(300px,84vw);transform:translateX(calc(-100% - 24px));transition:transform .22s cubic-bezier(.2,.8,.2,1)}.sidebar.open{transform:translateX(0)}.content{padding:0;gap:14px}.topbar{top:6px;padding:10px 12px;border-radius:15px}.page-title{font-size:22px}.page-subtitle{font-size:12px}.icon-btn{width:40px;height:40px}.menu-toggle{display:grid}.hero-row{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.stat{min-height:94px}.grid-2{grid-template-columns:1fr}.grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}.grid-4{grid-template-columns:repeat(2,minmax(0,1fr))}.page-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.auth-wrap{padding:14px}.auth-card{grid-template-columns:1fr;min-height:0;max-width:480px}.auth-brand-panel{min-height:245px;padding:22px}.school-seal{width:92px;height:92px}.brand-big{font-size:31px;margin-top:2px}.auth-form-panel{padding:25px 24px}.auth-form h1{font-size:23px}.auth-form>p{margin-bottom:18px}.requirement{flex-wrap:wrap}.requirement div{min-width:28%}}
+@media(max-width:520px){.shell{padding:9px}.topbar{gap:8px;padding:9px 10px}.page-title{font-size:19px}.page-subtitle{font-size:11px}.top-actions{gap:6px}.pill{padding:7px 9px;font-size:10px}.welcome{min-height:105px;padding:14px}.welcome h2{font-size:18px}.avatar{width:54px;height:54px}.card{padding:15px;border-radius:16px}.card-title{font-size:15px}.progress-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.progress-item{padding:12px 7px}.progress-item .big-icon{width:38px;height:38px;font-size:19px}.page-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.game-card,.plant-card{padding:14px 9px}.game-card .game-icon{width:52px;height:52px;font-size:29px}.game-card h3,.plant-card h3{font-size:12px}.game-card p,.plant-card p{font-size:10px}.lesson-row{gap:9px;padding:10px}.lesson-icon{width:36px;height:36px}.lesson-info strong{font-size:12px}.lesson-info small{font-size:10px}.lesson-row>.button,.lesson-row>.badge{font-size:9px;padding:6px 8px}.map-path{gap:1px;padding:9px 0 14px}.stop-circle{width:34px;height:34px;font-size:12px}.map-stop:not(:last-child):after{top:15px}.map-stop strong{font-size:9px}.map-stop small{font-size:8px}.profile-top{gap:12px}.profile-avatar{width:72px;height:72px}.requirement div{min-width:28%;padding:9px 3px}.modal{padding:22px 16px}.modal-actions>*{flex:1}.auth-wrap{padding:10px}.auth-brand-panel{min-height:215px}.auth-form-panel{padding:22px 18px}.auth-switch{font-size:10px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+.nav button.active{color:#073d66}
+.nav button.active .nav-icon{background:rgba(7,61,102,.11)}
+.button.orange{color:#542d00}
+.brand-name span{color:#ffd071}
+.brand-big span,.brand-slogan b{color:#a55300}
+.loading-state{min-height:128px;display:flex;align-items:center;justify-content:center;gap:12px;color:var(--muted);font-weight:800}
+.loading-state:before{content:'';width:22px;height:22px;flex:none;border:3px solid #d5eaf2;border-top-color:#168fe4;border-radius:50%;animation:numiquest-spin .8s linear infinite}
+@keyframes numiquest-spin{to{transform:rotate(360deg)}}
+.empty-state{padding:30px 18px;border:1px dashed #c4dfe9;border-radius:16px;background:linear-gradient(150deg,#fbfeff,#f4fbfe);line-height:1.6}
+.empty-state span{width:58px;height:58px;margin:0 auto 10px;border-radius:18px;display:grid;place-items:center;background:#e5f5fb;font-size:29px}
+body.dark-theme .empty-state{background:#17384f;border-color:#42667d}
+
