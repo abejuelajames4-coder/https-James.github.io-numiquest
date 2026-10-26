@@ -1,0 +1,23 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "NumiQuest: Start website",
+      "type": "shell",
+      "command": "cmd.exe",
+      "args": ["/c", "start.bat"],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "focus": false,
+        "clear": false
+      },
+      "group": "build"
+    }
+  ]
+}
+
