@@ -26,7 +26,9 @@ const UI_TRANSLATIONS=[
 function translateHtml(html){if(state.user?.language!=='Tagalog')return html;const template=document.createElement('template');template.innerHTML=html;const walker=document.createTreeWalker(template.content,NodeFilter.SHOW_TEXT);const nodes=[];while(walker.nextNode())nodes.push(walker.currentNode);for(const node of nodes){let value=node.nodeValue;for(const [en,tl] of UI_TRANSLATIONS)value=value.replaceAll(en,tl);node.nodeValue=value}return template.innerHTML}
 
 async function api(path, options={}){
-  const res=await fetch(path,{credentials:'same-origin',headers:{'Content-Type':'application/json',...(options.headers||{})},...options});
+  let res;
+  try{res=await fetch(path,{credentials:'same-origin',headers:{'Content-Type':'application/json',...(options.headers||{})},...options})}
+  catch{throw new Error('Cannot connect to NumiQuest. Run start.bat, keep its window open, then reload this page.')}
   const data=await res.json().catch(()=>({error:'Unexpected server response.'}));
   if(!res.ok)throw new Error(data.error||'Request failed.'); return data;
 }
