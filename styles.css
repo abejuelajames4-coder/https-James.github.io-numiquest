@@ -226,3 +226,21 @@ body.dark-theme .map-stop.locked .stop-circle{background:#22475f;color:#b7cfdd}
 @media(max-width:520px){.map-overview{padding:16px 13px}.map-overview .card-title{margin-bottom:15px}.map-path{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.map-stop{display:grid;grid-template-columns:38px minmax(0,1fr);grid-template-rows:auto auto;column-gap:9px;align-items:center;justify-items:start;min-height:62px;padding:8px;border:1px solid #dcecf2;border-radius:13px;background:rgba(255,255,255,.78);text-align:left}.map-stop:not(:last-child):after{display:none}.stop-circle{grid-column:1;grid-row:1/3;width:36px;height:36px;border-width:2px;font-size:13px}.stop-circle svg{width:15px;height:15px}.map-stop strong{grid-column:2;grid-row:1;min-height:0;margin:0;justify-content:flex-start;font-size:11px;text-align:left}.map-stop small{grid-column:2;grid-row:2;margin:2px 0 0;font-size:9px}.next-lesson-feature{grid-template-columns:40px minmax(0,1fr);gap:10px;padding:12px}.next-lesson-icon{width:40px;height:40px}.next-lesson-feature .badge{grid-column:2;justify-self:start}.map-next-progress{padding:0 12px}}
 @media(max-width:360px){.map-path{grid-template-columns:1fr}.map-stop{grid-template-columns:40px minmax(0,1fr)}}
 
+/* Gentle entrance and hover motion keeps the learning space lively without adding clutter. */
+@keyframes nq-fade-up{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@keyframes nq-slide-in{from{opacity:0;transform:translateX(-12px)}to{opacity:1;transform:translateX(0)}}
+@media(prefers-reduced-motion:no-preference){
+ .auth-card{animation:nq-fade-up .48s cubic-bezier(.2,.75,.25,1) both}
+ .shell>.sidebar{animation:nq-slide-in .42s cubic-bezier(.2,.75,.25,1) both}
+ .content>*{animation:nq-fade-up .42s cubic-bezier(.2,.75,.25,1) both}
+ .content>*:nth-child(2){animation-delay:.05s}
+ .content>*:nth-child(3){animation-delay:.1s}
+ .content>*:nth-child(4){animation-delay:.15s}
+ .content>*:nth-child(5){animation-delay:.2s}
+ .nav button .nav-icon,.button,.icon-btn,.card,.game-card,.plant-card,.stop-circle{transition:transform .2s ease,box-shadow .2s ease,background-color .2s ease}
+ .nav button:hover .nav-icon{transform:scale(1.12)}
+ .button:hover,.icon-btn:hover{transform:translateY(-2px)}
+ .card:hover,.game-card:hover,.plant-card:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(11,80,127,.12)}
+ .map-stop:hover .stop-circle{transform:scale(1.06)}
+}
+
