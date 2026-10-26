@@ -5,10 +5,10 @@ Responsive Grade 11 General Mathematics learning app using the original blue-and
 ## Run locally
 
 1. Install Python 3.10 or newer.
-2. Double-click `start.bat` (this local launcher enables the demo account).
-3. Open http://127.0.0.1:8000 in your browser.
+2. In VS Code, open this project folder and run **Terminal → Run Task → NumiQuest: Start website**. You can also double-click `start.bat` (this local launcher enables the demo account).
+3. Keep the VS Code terminal or server window open, then open http://127.0.0.1:8000 in your browser. Do not open `index.html` directly; the login and learning features need the Python server.
 
-The SQLite database is created automatically as `numiquest.sqlite3` beside the app. Keep the server window open while using the website. Press Ctrl+C in that window to stop it.
+The SQLite database is created automatically as `numiquest.sqlite3` beside the app. Keep the server running while using the website. Press Ctrl+C in the VS Code terminal or server window to stop it. If the login page reports that it cannot connect, start the task again and reload the page.
 
 ## Local demo teacher
 
